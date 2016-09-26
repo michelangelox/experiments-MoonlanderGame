@@ -9,4 +9,4 @@ It is functional, and not completely finished, but I want to move on to other pr
 ##usage
 Clone and run **MoonlanderTestPage.html** (ensure you have a browser that can render Silverlight content)
 
-![Moonlander](http://i.imgur.com/no7SY6F.png)
+![Moonlander](http://i.imgur.com/no7SY6F.png) ![Moonlander](http://i.imgur.com/6ydTC3w.png)
