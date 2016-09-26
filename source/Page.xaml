@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Silverlight_Moonlander_1.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="400" KeyDown="UserControl_KeyDown" KeyUp="UserControl_KeyUp">
+	
+	<StackPanel x:Name="StackPanelRoot" Background="Beige" Height="400" Width="400">
+		<Canvas x:Name="CanvasGameData" Height="60" Width="400">
+			<TextBlock x:Name="txtLevel"			Canvas.Top="002" Canvas.Left="004" Height="10" Width="100" FontFamily="04b_03__.ttf#04b03" FontSize="12" />
+			<TextBlock x:Name="txtFuel"				Canvas.Top="015" Canvas.Left="004" Height="10" Width="100" FontSize="10" Canvas.ZIndex="101" />
+			<TextBlock x:Name="txtTime"				Canvas.Top="030" Canvas.Left="004" Height="10" Width="100" FontSize="10" Canvas.ZIndex="101"/>
+			
+			<TextBlock x:Name="txtVerticalSpeed"	Canvas.Top="000" Canvas.Left="132" Height="10" Width="100" FontSize="10"/>
+			<TextBlock x:Name="txtHorizontalSpeed"	Canvas.Top="015" Canvas.Left="132" Height="10" Width="100" FontSize="10"/>
+			<TextBlock x:Name="txtMoonLanderAngle"	Canvas.Top="030" Canvas.Left="132" Height="10" Width="100" FontSize="10"/>
+
+			<Rectangle x:Name="rectFuelGauge"		Canvas.Top="016" Canvas.Left="033" Height="13"	Width="80" Fill="Green" Stroke="Black" Opacity="0.5" Canvas.ZIndex="99"/>
+			<Rectangle x:Name="rectFuelGaugeBox"	Canvas.Top="016" Canvas.Left="033" Height="13"	Width="80" Fill="Transparent" Stroke="Black" Opacity="0.5" Canvas.ZIndex="100"/>
+
+			<Rectangle x:Name="rectTimeGauge"		Canvas.Top="031" Canvas.Left="033" Height="13"	Width="80" Fill="Green" Stroke="Black" Opacity="0.5" Canvas.ZIndex="99"/>
+			<Rectangle x:Name="rectTimeGaugeBox"	Canvas.Top="031" Canvas.Left="033" Height="13"	Width="80" Fill="Transparent" Stroke="Black" Opacity="0.5" Canvas.ZIndex="100"/>
+
+			<Ellipse	x:Name="rectOkHorizontalSpeed"	Canvas.Top="004" Canvas.Left="255" Height="10"	Width="10" Fill="Green" Stroke="Black" Opacity="0.5" Canvas.ZIndex="200" />			
+			<Ellipse	x:Name="rectOkVerticalSpeed"	Canvas.Top="018" Canvas.Left="255" Height="10"	Width="10" Fill="Green" Stroke="Black" Opacity="0.5" Canvas.ZIndex="200"/>
+			<Ellipse	x:Name="rectOkAngle"			Canvas.Top="033" Canvas.Left="255" Height="10"	Width="10" Fill="Green" Stroke="Black" Opacity="0.5" Canvas.ZIndex="200"/>
+
+			<Line										Canvas.Top="009" Canvas.Left="235" Height="01"	Width="15" Stroke="Black" Canvas.ZIndex="200" X1="0" Y1="0" X2="15" Y2="0" Opacity="0.5"/>
+			<Line										Canvas.Top="023" Canvas.Left="235" Height="01"	Width="15" Stroke="Black" Canvas.ZIndex="200" X1="0" Y1="0" X2="15" Y2="0" Opacity="0.5"/>
+			<Line										Canvas.Top="038" Canvas.Left="235" Height="01"	Width="15" Stroke="Black" Canvas.ZIndex="200" X1="0" Y1="0" X2="15" Y2="0" Opacity="0.5"/>
+
+			<Rectangle	x:Name="rectOkContainer"		Canvas.Top="001" Canvas.Left="250" Height="44" Width="20" Stroke="Black" Canvas.ZIndex="201" Opacity="0.2" Fill="Transparent" />
+		
+			<Rectangle	x:Name="PlayAgainBox"			Canvas.Top="001" Canvas.Left="275" Height="44"	Width="125" Fill="White" Stroke="Black" Opacity="0.5" Canvas.ZIndex="99"/>
+
+			<Button		x:Name="PlayAgainButton"		Canvas.Top="4" Canvas.Left="278" Height="38" Width="118" Click="PlayAgainButton_Click" Content="Play!" Canvas.ZIndex="4000"></Button>
+			
+		</Canvas>
+		
+		<Canvas x:Name="CanvasGamePlay" Height="300" Width="400">
+			<TextBlock Text="MoonscapePoints: "			Canvas.Top="308" Canvas.Left="005" Height="10" Width="100" FontSize="10" />
+			<ComboBox x:Name="MoonscapePointsCombo"		Canvas.Top="305" Canvas.Left="97" SelectedIndex="3" FontSize="10">
+				<ComboBoxItem Content="4" />
+				<ComboBoxItem Content="6" />
+				<ComboBoxItem Content="8" />
+				<ComboBoxItem Content="10" />
+				<ComboBoxItem Content="12" />
+				<ComboBoxItem Content="16" />
+				<ComboBoxItem Content="32" />
+			</ComboBox>
+			<TextBlock Text="LandingPadWidth: "			Canvas.Top="308" Canvas.Left="155" Height="10" Width="100" FontSize="10" />
+			<ComboBox x:Name="LandingWidthCombo"		Canvas.Top="305" Canvas.Left="248" SelectedIndex="0" FontSize="10">
+				<ComboBoxItem Content="40" />
+				<ComboBoxItem Content="50" />
+				<ComboBoxItem Content="60" />
+			</ComboBox>
+			<TextBlock Text="px"						Canvas.Top="307" Canvas.Left="295" Height="10" Width="10" FontSize="10" />
+		</Canvas>
+	</StackPanel>
+</UserControl>
